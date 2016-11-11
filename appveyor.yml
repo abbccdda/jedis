@@ -1,0 +1,13 @@
+install:
+  - cmd: java -version
+  - make compile-module
+  - make start
+
+
+test_script:
+  - mvn -Dtest=\!ModuleTest clean compile test
+
+cache:
+  - '%HOMEPATH%\.m2' 
+
+build: off
