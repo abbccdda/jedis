@@ -1,7 +1,6 @@
 install:
   - cmd: java -version
-  - make compile-module
-  - make start
+  - gcc -shared -o /tmp/testmodule.so -fPIC src/test/resources/testmodule.c
 
 
 test_script:
